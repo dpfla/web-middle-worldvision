@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/*비쥬얼 영역*/
+#visiualArea {
+    height: 290px;
+    margin-top: 80px;
+}
+#visiualArea img{
+    width: 100%;
+    min-width: 1400px;
+    height: 300px;
+    object-fit: none;
+    filter: brightness(75%);
+}
+#visiualArea h2 {
+    position: relative;
+    top: -290px;
+    height: 290px;
+    text-align: center;
+    line-height: 290px;
+    font-size: 2.5em;
+    color: #f0f0f0;
+}
+
+/*컨텐츠 영역*/
+.campaign {
+    width: 352px;
+    height: 343px;
+    display: inline-block;
+    outline: 1px solid #ddd;
+    outline-offset: -1px;
+    cursor: pointer;
+}
+#imageArea {
+    width: 100%;
+    height: 780px;
+    margin: 80px 0 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+}
+.imageArea > .campaign:nth-child(0), .imageArea > .campaign:nth-child(3){
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.imageArea > .campaign:nth-child(1), .imageArea > .campaign:nth-child(4){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.imageArea > .campaign:nth-child(2), .imageArea > .campaign:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.campaign  img{
+    width: 350px;    
+    transition: all 0.7s;
+}
+.campaignImg{
+    width: 350px;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.campaignImg > img:hover {
+    transform: scale(1.1, 1.1);    
+    filter: brightness(85%);
+}
+.campaign > figcaption {
+    margin: 30px 0 30px 20px;
+}
+.campaign > figcaption > h3{
+    font-size: 1.3em;
+}
+.campaign > figcaption > p{
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+.paging{
+    text-align: center;
+}
+.paging li{
+    display: inline-block;
+    cursor: pointer;
+}
+.paging li:nth-child(3){
+    margin-left: 17px;
+    margin-right: 5px;
+}
+.paging li:nth-child(4){
+    margin-right: 17px;
+    margin-left: 5px;
+}
+.paging li:not(.btn){
+    padding: 5px;
+    color: #666;
+}
+.paging .btn{
+    position: relative;
+    top: 10px;
+}
+.paging .btn_first {
+    width: 30px; height: 30px;
+    background: url('../images/campaign/campaign_btn_sprites.png') -10px -10px;
+}
+.paging .btn_prev {
+    width: 30px; height: 30px;
+    background: url('../images/campaign/campaign_btn_sprites.png') -10px -60px;
+}
+.paging .btn_next {
+    width: 30px; height: 30px;
+    background: url('../images/campaign/campaign_btn_sprites.png') -60px -60px;
+}
+.paging .btn_last {
+    width: 30px; height: 30px;
+    background: url('../images/campaign/campaign_btn_sprites.png') -60px -10px;
+}

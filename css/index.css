@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/*광고영역*/
+#advertiseArea{
+    margin-top: 80px;
+    min-width: 1400px;
+    height: 630px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderAdvertiseImage {
+    width: 14400px;
+    height: 630px;
+    position: relative;
+}
+.advertiseImage{
+    height: 630px;
+    float: left;
+}
+.btnAd {
+    position: relative;
+    z-index: 10;
+    top: -100px;
+}
+.btnAd > div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 100px;
+    cursor: pointer;
+}
+.btnAd > div:first-child {
+    background-image: url(../images/button_sprites.png);
+    background-position: -10px -10px;
+    position: absolute;
+    left: 10px;
+    top: -300px;
+}
+.btnAd > div:last-child {
+    background-image: url(../images/button_sprites.png);
+    background-position: -130px -10px;
+    position: absolute;
+    right: 10px;
+    top: -300px;
+}
+.underBarArea{
+    position: absolute;
+    top: 580px;
+    width: 100%;
+    text-align: center;
+}
+.adUnderBar {
+    display: inline-block;
+    width: 80px;
+    height: 4px;
+    border: none;
+    border-radius: 20px / 5px;
+    background-color: rgb(88, 88, 88);
+    margin-right: 10px;
+    cursor: pointer;
+}
+.adUnderBar.active {
+    background-color: rgb(224, 224, 224);
+}
+
+/*컨텐츠 영역*/
+#storyArea {
+    height: 730px;
+    box-sizing: border-box;
+}
+#storyArea > h2{
+    text-align: center;
+    font-size: 2em;
+    margin: 120px 0 40px;
+}
+.Story {
+    position: relative;
+    top: -50px;
+}
+.storyALink {
+    display: inline-block;
+    width: 175px;
+    position: relative;
+    text-align: left;
+}
+.storyALink:hover img{
+    /*outline: 2px solid rgb(255, 116, 10);
+    border-color: #fff;*/
+    transform: scale(1.05, 1.05);
+    filter: brightness(85%);
+}
+.storyALink img {
+    width: 175px;
+    height: 240px;
+   transition: transform 0.5s, filter 0.5s;
+}
+.story2 {
+    width: 270px;
+    height: 370px;
+    margin-left: 65px;
+    margin-right: 65px;
+    position: relative;
+    top: 130px;
+}
+.story2 img{
+    width: 270px;
+    height: 370px;
+}
+.story3, .story4 {
+    margin-right: 10px;
+}
+.storySliderImage > a:nth-child(6){
+    display: none;
+}
+.sliderTextArea {
+    height: 97px;
+}
+.sliderTextArea .slider_text{
+    display: inline-block;
+    width: 175px;
+    padding-top: 5px;
+}
+.slider_text p {
+    font-size: 0.9em;
+    text-align: justify;
+    height: 60px;
+    font-weight: 400;
+    color: #333;
+    padding-bottom: 10px;
+}
+.slider_text h3{
+    font-size: 1em;
+    margin: 5px 0;
+    font-weight: 700;
+}
+.sliderTextArea > div:nth-child(2){
+    width: 270px;
+    height: 100px;
+    margin-left: 65px;
+    margin-right: 65px;
+    position: relative;
+    top: 130px;
+}
+.sliderTextArea > div:nth-child(3), .sliderTextArea > div:nth-child(4){
+    margin-right: 10px;
+}
+.sliderTextArea > div:nth-child(6){
+    display: none;
+}
+.btnStroy{
+    display: inline-block;
+    position: relative;
+    left: 170px;
+}
+.btnStroy > div{
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 50px;
+    cursor: pointer;
+    top: 20px;
+}
+.btnStroy #btnPrevStory{
+    background: url(../images/button_sprites.png);
+    background-position: -10px -130px;  
+    left: -18px;
+}
+.btnStroy #btnNextStory{ 
+    background: url(../images/button_sprites.png);
+    background-position: -80px -130px;  
+    left: 380px;
+}
+
+/*투명성 영역*/
+#transparencyArea{
+    height: 730px;
+    margin-top: 80px;
+}
+#transparencyArea > h2 {
+    font-size: 2.3em;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 70px;
+}
+#transparencyArea > h2 > span {
+    font-weight: bold;
+}
+.transparencyLeft{
+    display: inline-block;
+}
+.transparencyLeft > img{
+    width: 700px;
+    margin-top: 20px;
+}
+.transparencyRight {
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    margin-left: 50px;
+    top: -50px;
+}
+.transparencyRight > p{
+    font-size: 1.7em;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+.transparencyRight > button {
+    width: 45%;
+    height: 60px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: rgb(255, 116, 10);
+    border-radius: 5px;
+}
+.transparencyRight > button > span {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+/*후원 종류 영역*/
+#donateArea {
+    height: 730px;
+    margin-top: 80px;
+}
+#donateArea > h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 80px 0 40px;
+}
+#donateArea > section{
+    width: 1160px;
+    position: absolute;
+    background-color: #fff;
+    padding: 70px 80px;  
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#donateArea > section > figure{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#donateArea > section > figure  img {
+    height: 300px;
+    transition: all 0.5s;
+}
+#donateArea > section > figure:hover img{
+    transform: scale(1.1, 1.1);
+}
+.img2 > figure {
+    margin-left: 47px;
+    margin-right: 47px;
+}
+#donateWorkArea > figure {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#donateSpecialArea > figure {
+    margin-left: 21px;
+    margin-right: 21px;
+}
+.donatekindArea {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400;
+    position: absolute;
+    top: 490px;
+    padding: 20px;
+}
+.donateImg {
+    height: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+#donateChildArea h3 {
+    left: 230px;
+}
+#donateChildArea .donateImg {
+    width: 400px;
+    border-radius: 3px;
+}
+#donateWorkArea h3 {
+    left: 390px;
+}
+#donateWorkArea .donateImg {
+    width: 215px;
+    border-radius: 3px;
+}
+#donateCompanyArea h3 {
+    left: 550px;
+}
+#donateCompanyArea .donateImg {
+    width: 400px;
+    border-radius: 3px;
+}
+#donateSpecialArea h3 {
+    left: 790px;
+}
+#donateSpecialArea .donateImg {
+    width: 285px;
+    border-radius: 3px;
+}
+#donateArea > section .target{
+    color: rgb(255, 116, 10);
+}
+.btnDonate {
+    position: relative;
+}
+.btnDonate > div {
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 50px;
+    cursor: pointer;
+    top: 200px;
+    z-index: 40;
+}
+#btnPrevDonate {
+    background-image: url(../images/button_sprites.png);
+    background-position: -150px -130px;
+    left: 0;
+}
+#btnNextDonate {
+    background-image: url(../images/button_sprites.png);
+    background-position: -250px -10px;
+    right: 0;
+}
+
+/*공지사항 및 캠페인 영역*/
+#infoArea {
+    height: 680px;
+    margin-top: 80px;
+    position: relative;
+}
+#infoArea h2 {
+    text-align: left;
+    font-size: 2em;
+    margin: 80px 0 40px 10px;
+}
+#infoArea > section {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+}
+.more {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 35px;
+    background-image: url(../images/button_sprites.png);
+    background-position: -250px -140px;
+    cursor: pointer;
+    position: absolute;
+    top: 130px;
+}
+#noticeArea{
+    float: left;
+    padding-right: 3%;
+    padding-left: 1%;
+}
+#noticeArea > ul {
+    padding-top: 22px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+#noticeArea > ul > li {
+    padding: 25px 10px 25px 10px;
+    border-top: 1px solid #333;
+}
+#noticeArea > ul > li:last-child{
+    border-bottom: 1px solid #333;
+}
+#noticeArea > ul > li:hover a{
+    color: rgb(255, 116, 10);
+}
+#noticeArea > ul > li:hover{
+    color: rgb(255, 116, 10);
+}
+#noticeArea > ul > li > a {
+    display: inline-block;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#noticeArea > ul > li > time {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    margin-left: 4%;
+    position: relative;
+    top: -5px;
+}
+#noticeArea > .more {
+    right: 630px;
+}
+#campaignArea{
+    float: right;
+    padding-left: 3%;
+    padding-right: 1%;
+}
+#campaignArea::after {
+    clear: both;
+}
+#campaignArea > .more {
+    right: 30px;
+}
+.gridCampaignImg {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 205px 205px;
+    padding-top: 20px;
+}
+.gridCampaignImg > div > img {
+    width: 98%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1),
+                -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+.gridCampaignImg > div {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.gridCampaignImg > div:hover .campaignInfo, .gridCampaignImg > div:focus .campaignInfo{
+    opacity: 1;
+    transform: translateY(-202px);
+}
+.campaignInfo {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 98%;
+    height: 96%;
+    color: #fff;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 30px 0;
+    transition: all 0.6s;
+    z-index: 10;
+}
+.campaignInfo > h3{
+    text-align: center;
+    
+}
+.campaignInfo > p{
+    padding: 20px;
+    text-align: justify;
+}

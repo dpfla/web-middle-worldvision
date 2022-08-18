@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/*초기화*/
+html, body, a, div, header, h1, img, nav, h2, ul, li, section, figure, figcaption, p,
+h3, button, form, fieldset, legend, input, footer{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+fieldset{
+    border: 0;
+}
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+  }
+
+/*숨김 컨텐츠*/
+.hidden,legend {
+    position: absolute;
+    left: -9999px;
+}
+
+
+/*폰트 설정*/
+
+/*링크 스타일*/
+a:link, a:visited{
+    color: #000;
+    text-decoration: none;
+}
+
+/*기본 설정*/
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.4;
+    font-size: 15px;
+} 
+
+/*건너뛰기 링크*/
+.skipNav{
+    position: absolute;
+    left: -9999px;
+}
+.skipNav:focus{
+    left: 50%;
+    margin: 3px 0 0 -3em;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    outline: 0;
+    z-index: 10;
+    text-decoration: none;
+}
+
+/*전체 레이아웃*/
+#contentsArea,footer{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+#wrapper {
+    background-color: #fff;
+}
+
+/*헤더 영역 시작*/
+header {
+    height: 80px;
+    width: 100%;
+    min-width: 1400px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 50;
+}
+.logo{
+    position: absolute;
+    top: 20px;
+    z-index: 60;
+}
+.logo, nav, .mainMenu > li, .mainMenu > li > a{
+    display: inline-block;
+}
+.mainMenu{
+    position: absolute;
+    left: 180px;
+    height: 220px;
+    z-index: 60;
+}
+.mainMenu > li {
+    position: absolute;
+    text-align: center;
+    width: 110px;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.mainMenu > li:hover > a, .mainMenu > li:focus > a {
+    border-bottom: 3px solid rgb(255, 116, 10);
+}
+.mainMenu > li > a{
+    font-size: 1.2em;
+    display: block;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 10px;
+}
+.underMenu {
+    height: 300px;
+    margin-top: 20px;
+    display: none;
+    background-color: #fff;
+}
+.underMenu > li {
+    display: block;
+    padding: 10px 3px;
+    z-index: 50;
+}
+.underMenu a:hover, .underMenu a:focus {
+    color: rgb(204, 92, 0);
+}
+.mainMenu > li:nth-child(1){
+    left: 30px;
+}
+.mainMenu > li:nth-child(2){
+    left: 170px;
+}
+.mainMenu > li:nth-child(3){
+    left: 310px;
+}
+.mainMenu > li:nth-child(4){
+    left: 450px;
+}
+.userArea {
+    position: fixed;
+    width: 100%;
+    min-width: 1400px;
+    text-align: right;
+    padding-top: 7px;
+    display: inline-block;
+}
+.userArea > a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 40px;
+    background: url("../images/button_sprites.png") -250px -80px;
+    position: relative;
+    top: 17px;
+    margin-right: 40px;
+}
+.userArea > button {
+    width: 180px;
+    height: 56px;
+    margin-right: 30px;
+    background-color: rgb(255, 116, 10);
+    color: #fff;
+    border: none;
+    font-size: 1.3em;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.userArea > button:hover {
+    background-color: rgb(255, 81, 0);
+}
+
+/*메인컨텐츠 영역*/
+#contentsArea{
+    padding: 10px 20px;
+}
+
+/*뉴스레터 영역*/
+#newsletterArea {
+    height:90px;
+    background-color: rgb(255, 227, 202);
+    margin-top: 50px;
+}
+.innerNewsLetter {
+    width: 1160px;
+    height: 100%;
+    margin: 0 auto;  
+}
+.innerNewsLetter > p {
+    display: inline-block;
+    font-size: 1.4em;
+    text-align: center;
+    width: 38%;
+    box-sizing: border-box;
+    margin: 27px 0 25px;
+}
+#newsletterform {
+    display: inline-block;
+    width: 58%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    margin: 27px 0 25px 20px;
+}
+#newsletterform fieldset{
+    margin: 0 auto;
+}
+#newsletterform input:focus {
+    outline: 1px solid rgb(255, 116, 10);
+}
+#newsletterform #applicantName {
+    box-sizing: border-box;
+    width: 30%;
+    height:40px;
+    padding-left: 10px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#newsletterform #applicantEmail {
+    box-sizing: border-box;
+    width: 35%;
+    height:40px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#newsletterform button{
+    box-sizing: border-box;
+    width: 25%;
+    height:40px;
+    margin-left: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(255, 116, 10);
+    color: #fff;
+}
+
+/*푸터 영역*/
+footer {
+    padding: 0 40px;
+    height: 300px;
+}
+.guide {
+    height:100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.guide > ul > li {
+    display: inline-block;
+    padding-top: 50px;
+    margin-right: 20px;
+}
+.guide > ul > li::after {
+    content: "|";
+    margin-left: 20px;
+    color: #ccc;
+    font-size: 1.1em;
+}
+.guide > ul > li:first-child {
+    color: rgb(255, 116, 10);
+    margin-right: 30px;
+}
+.guide > ul > li:first-child::after, .guide > ul > li:last-child::after{
+    content: "";
+}
+address {
+    height: 200px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+address > img {
+    width: 200px;
+    margin-right: 10px;
+    position: relative;
+    top: -30px;
+    left:10px
+}
+address > div {
+    display: inline-block;
+    text-align: left;
+    font-style: normal;
+}
+address span {
+    display: block;
+    padding-bottom: 10px;
+}
+address > .addressinfo1 {
+    margin-left: 20px;
+}
+address > .addressinfo2 {
+    position: relative;
+    top: -30px;
+    margin-left: 60px;
+}
+.addressinfo2 > span:nth-child(1), .addressinfo2 > span:nth-child(2){
+    display: inline-block;
+}
+.addressinfo2 > span:nth-child(1)::after {
+    content: "|";
+    margin-left: 10px;
+    color: #ccc;
+    font-size: 1.1em;
+}

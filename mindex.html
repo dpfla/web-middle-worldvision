@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldvision</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav a:link, a:visited {
+            color: #fff;
+        }
+        nav a:active{
+            color: rgb(255, 116, 10);
+        }
+        h1{
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        p{
+            font-size: 1.3em;
+            line-height: 2;
+        }
+        li{
+            font-size: 1em;
+            line-height: 2;
+        }
+        #container{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+            padding: 10px 5px;
+            border-bottom: 1px solid #ccc;
+            background-color: #000;
+        }
+        #main-nav li {
+            display: inline-block;
+            color: #333;
+            font-size: 0.8em;
+            margin: 5px 15px;
+        }
+        img{
+            width: 90%;
+        }
+        .photo{
+            text-align: center;
+        }
+        .ice{
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        #choice ul {
+            margin-left: 20px;
+            
+        }
+        footer{
+            background-color: #000;
+            width: 100%;
+            padding: 10px 5px;
+            margin-top: 20px;
+        }
+        footer p {
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul id="main-nav">
+                    <li><a href="#intro">월드비전</a></li>
+                    <li><a href="#map">후원</a></li>
+                    <li><a href="#chooice">캠페인</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="intro">
+            <div class="page-title">
+                <h1>월드비전</h1> <!--메인 페이지 타이틀-->
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/월드비전_소개1.png" alt="월드비전 소개 이미지">
+                </div>
+                <div class="text">
+                    <p>국내 60만명 후원자가 선택한 <br>세계 최대 아동후원 NGO</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="map">
+            <div class="page-title">
+                <h1>후원</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img class="ice" src="images/후원이미지/아동후원_국내.jpg" alt="국내 아동 후원 이미지">
+                </div>
+                <div class="text">
+                    <p>국내 아이들에게 정기원하기</p>
+                </div>
+            </div>
+        </section>
+        <section id="choice">
+            <div class="page-title">
+                <h1>캠페인</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/index_image/index_campaign1.jpg" alt="하루팔찌 캠페인">
+                </div>
+                <div class="text">
+                    <p>하루팔찌와 함께 하는 우리의 일상이 모여, 전쟁 속 아이들의 일상을 지킵니다.</p>
+                    <ul>
+                        <li><h2>그외 캠페인</h2></li>
+                        <li>면생리대 만들기</li>
+                        <li>쵸즌: 아이의 선택</li>
+                        <li>세계 시민 DNA</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Worldvision</p>
+        </footer>
+    </div>
+</body>
+</html>

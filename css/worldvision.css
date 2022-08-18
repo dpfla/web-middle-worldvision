@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*비쥬얼 영역*/
+#visiualArea {
+    height: 290px;
+    margin-top: 80px;
+}
+#visiualArea img{
+    width: 100%;
+    min-width: 1400px;
+    height: 300px;
+    object-fit: none;
+    filter: brightness(75%);
+}
+#visiualArea h2 {
+    position: relative;
+    top: -290px;
+    height: 290px;
+    text-align: center;
+    line-height: 290px;
+    font-size: 2.5em;
+    color: #f0f0f0;
+}
+ /*컨텐츠 영역*/
+/*언더 메뉴 영역*/
+.miniMenu{
+    text-align: center;
+    margin: 40px 0 100px;
+}
+.miniMenu > ul > li{
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 0 20px;
+}
+.miniMenu > ul > li:first-child::before{
+    content: "";
+    display: block;
+    width: 145px;
+    height: 2px;
+    background-color: rgb(255, 116, 10);
+    position: relative;
+    top: 40px;
+    left: -20px;
+}
+.miniMenu > ul > li::after {
+    content: "|";
+    font-size: 1.2em;
+    margin-left: 40px;
+    color: #ccc;
+}
+.miniMenu > ul > li:last-child:after{
+    content: "";
+}
+
+/*단락 영역*/
+#contentsArea > div > img {
+    width: 35%;
+}
+.paragraphLeft, .paragraphRight {
+    height: 350px;
+    text-align: center;
+}
+.paragraphL {
+    display: inline-block;
+    width: 55%;
+    box-sizing: border-box;
+    margin-left: 20px;
+    padding: 40px 0 40px 40px;
+    position: relative;
+    top: -60px;
+}
+.paragraphL > h3 {
+    text-align: left;
+    font-size: 1.6em;
+    color: rgb(255, 116, 10);
+    margin-bottom: 20px;
+}
+div[class ^= "paragraph"] p {
+    font-size: 1.1em;
+    line-height: 2;
+    text-align: justify;
+
+}
+.paragraphRight > img {
+    float: right;
+    margin-right: 25px;
+}
+.paragraphR {
+    width: 650px;
+    float: left;
+    box-sizing: border-box;
+    margin: 0 20px 0 25px;
+    padding: 40px 40px 40px 0;
+    position: relative;
+    top: 20px;
+}
+.paragraphR::after {
+    clear: both;
+}
+.paragraphR > h3 {
+    font-size: 1.6em;
+    color: rgb(255, 116, 10);
+    margin-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}

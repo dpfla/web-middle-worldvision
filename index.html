@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LeeYeRim">
+    <meta name="description" content="worldvision">
+    <meta name="robot" content="all">
+    <title>월드비전</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/worldvision_icon_small.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        /*let user=navigator.userAgent;
+        alert(user);*/
+        let smartPhones=[
+            "iPhone", "iPad", "iPod", "Opera Mini", "Opera Mobi", "Nokia", "Android 12",
+            "WebOS", "Windows CE", "BlackBerry", "IEMobile", "SonyEricsson"
+        ];
+        //스마트폰 구분
+        for(let i in smartPhones){
+            if(navigator.userAgent.toLowerCase().match(new RegExp(smartPhones[i].toLowerCase()))){
+                document.location="http://yerim.dothome.co.kr/mindex.html"
+            } //navigator.userAgent: 유저 스마트폰 정보
+        }
+    </script>
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a class="skipNav" href="#contentsArea">본문 바로가기</a>
+    <a class="skipNav" href="#storyArea">스토리</a>
+    <a class="skipNav" href="#donateArea">후원하기</a>
+    <a class="skipNav" href="#noticeArea">공지사항</a>
+    <a class="skipNav" href="#campaignArea">캠페인</a>
+
+    <!--건너뛰기 링크 종료-->
+
+    <!--wraper 시작-->
+    <div id="wrapper">
+        <!--헤더 영역 시작-->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/worldvision_logo.jpg" alt="world vision 로고" height="40">
+                </a>
+            </h1>
+            <!--메인메뉴 시작-->
+            <nav role="navigation">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li>
+                        <a class="topMenu" href="worldvision.html">월드비전</a>
+                        <ul class="aboutWorldvision underMenu">
+                            <li><a href="worldvision.html">월드비전 소개</a></li>
+                            <li><a href="worldvision.html">국제 월드비전</a></li>
+                            <li><a href="worldvision.html">한국 월드비전</a></li>
+                            <li><a href="worldvision.html">월드비전 가이드</a></li>
+                            <li><a href="worldvision.html">투명한 경영</a></li>
+                            <li><a href="worldvision.html">친선홍보대사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="topMenu" href="donate.html">후원</a>
+                        <ul class="aboutDonate underMenu">
+                            <li><a href="donate.html">아동후원</a></li>
+                            <li><a href="donate.html">사업후원</a></li>
+                            <li><a href="donate.html">기업후원</a></li>
+                            <li><a href="donate.html">특별후원</a></li>
+                            <li><a href="donate.html">후원신청하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="topMenu" href="campaign.html">캠페인</a>
+                        <ul class="aboutCampaign underMenu">
+                            <li><a href="campaign.html">캠페인</a></li>
+                            <li><a href="campaign.html">세계시민교육</a></li>
+                            <li><a href="campaign.html">후원자 참여</a></li>
+                            <li><a href="campaign.html">사랑의 동전밭</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="topMenu" href="story.html">스토리</a>
+                        
+                    </li>
+                </ul>
+            </nav>
+            <!--메인메뉴 종료-->
+            <!--로그인, 후원하기 영역-->
+            <div class="userArea">
+                <a href="join.html">사용자 정보</a>
+                <button>후원하기</button>
+            </div>
+        </header>
+        <!--헤더 영역 종료-->
+
+        <!--광고 영역 시작-->
+        <div id="advertiseArea">
+            <h2 class="hidden">이벤트 광고 영역</h2>
+            <div class="sliderAdvertiseImage">
+                <img src="images/index_image/index_ad1.jpg" class="advertiseImage" alt="">
+                <img src="images/index_image/index_ad2.jpg" class="advertiseImage" alt="">
+                <img src="images/index_image/index_ad3.jpg" class="advertiseImage" alt="">
+                <img src="images/index_image/index_ad4.jpg" class="advertiseImage" alt="">
+            </div>
+            <div class="btnAd">
+                <div id="btnPrevAd" role="button">이전 광고 보기</div>
+                <div id="btnNextAd" role="button">다음 광고 보기</div>
+            </div>
+            <div class="underBarArea">
+                <div id="adUnderBar1" class="adUnderBar"></div>
+                <div id="adUnderBar2" class="adUnderBar"></div>
+                <div id="adUnderBar3" class="adUnderBar"></div>
+                <div id="adUnderBar4" class="adUnderBar"></div>
+            </div>
+
+        </div>
+        <!--광고 영역 종료-->
+
+        <!--컨텐츠 영역 시작-->
+        <div id="contentsArea">
+            <!--스토리 영역 시작-->
+            <div id="storyArea">
+                <h2>월드비전 스토리</h2>
+                <section class="Story">
+                    <div class="storySliderImage">
+                        <a href="story.html" class="storyALink story1">
+                            <div class="img">
+                                <img src="images/index_image/index_story1.jpg" alt="스토리1">
+                            </div>
+                        </a>
+                        <a href="story.html" class="storyALink story2">
+                            <div class="img">
+                                <img src="images/index_image/index_story2.jpg" alt="스토리2">
+                            </div>
+                        </a>
+                        <a href="story.html" class="storyALink story3">
+                            <div class="img">
+                                <img src="images/index_image/index_story3.jpg" alt="스토리3">
+                            </div>
+                        </a>
+                        <a href="story.html" class="storyALink story4">
+                            <div class="img">
+                                <img src="images/index_image/index_story4.jpg" alt="스토리4">
+                            </div>
+                        </a>
+                        <a href="story.html" class="storyALink story5">
+                            <div class="img">
+                                <img src="images/index_image/index_story5.jpg" alt="스토리5">
+                            </div>
+                        </a>
+                        <a href="story.html" class="storyALink story6">
+                            <div class="img">
+                                <img src="images/index_image/index_story6.jpg" alt="스토리6">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sliderTextArea">
+                        <div class="slider_text">
+                            <h3>큰별쌤의 꿈 이야기</h3>
+                            <p>여러분의 꿈은 명사여선 안됩니다. 동사여야 합니다.</p>
+                        </div>
+                        <div class="slider_text">
+                            <h3>힘이 되고 싶어요</h3>
+                            <p>도움을 받던 제가 이제 후배들에게 힘이 되고 싶어요</p>
+                        </div>
+                        <div class="slider_text">
+                            <h3>언제나 월드비전</h3>
+                            <p>긴급한 도움이 필요한 곳마다 달려간 월드비전</p>
+                        </div>
+                        <div class="slider_text">
+                            <h3>가뭄을 이겨내는 법</h3>
+                            <p>가뭄으로 고통받는 케냐, 가뭄 대응 역량 강화 사업</p>
+                        </div>
+                        <div class="slider_text">
+                            <h3>기후변화와 기근</h3>
+                            <p>기후변화에 가장 취약한 아동들, 기후변화의 진실</p>
+                        </div>
+                        <div class="slider_text">
+                            <h3>여성할례의 진실</h3>
+                            <p>생계와 목숨에 위협을 받고 있는 세계의 여성들</p>
+                        </div>
+                    </div>
+
+                    <div class="btnStroy">
+                        <div id="btnPrevStory" role="button">이전 스토리 보기</div>
+                        <div id="btnNextStory" role="button">다음 스토리 보기</div>
+                    </div>
+                </section>
+            </div>
+            <!--스토리 영역 종료-->
+
+            <!--후원하기 버튼 영역 시작
+            <div id="btnFixedDonation">
+                <img src="images/fixeddonation.png" alt="후원하기 버튼">
+            </div>-->
+            <!--후원하기 버튼 영역 종료-->
+
+            <!--투명성 영역 시작-->
+            <div id="transparencyArea">
+                <h2>한국 <span>월드비전</span>이 <br><span>투명한 기부금 운영</span>을 <br>약속합니다</h2>
+                <div class="transparencyLeft">
+                    <img src="images/index_image/인증.png" alt="투명성 인증 마크, UN세계식량계획, 삼일회계법인 투명경영대상, 한국능률협회컨설팅선정 브랜드파워 NGO부분 1위">
+                </div>
+                <div class="transparencyRight">
+                    <p>국내 60만명 후원자가 선택한 <br>세계 최대 아동후원 NGO</p>
+                    <button class="btnFinancialReporting"><span>2021 사업/재무보고</span></button>
+                    <button class="btnOperateDonations"><span>2021 후원금 운영</span></button>
+                </div>
+            </div>
+            <!--투명성 영역 종료-->
+
+            <!--후원 종류 영역 시작-->
+            <div id="donateArea">
+                <h2>월드비전과 함께하기</h2>
+                <section id ="donateChildArea" class="img2">
+                    <h3 class="donatekindArea"><a href="#donateChildArea" onclick="return false;">아동후원</a></h3>
+                    <figure class="localChildDonate">
+                        <a href="donate.html#donateChildHead">
+                            <figcaption>국내아동후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/아동후원_국내.jpg" alt="국내 아동 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="globalChildDonate">
+                        <a href="donate.html#donateChildHead">
+                            <figcaption>해외아동후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/아동후원_해외.jpg" alt="해외 아동 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                </section>
+                <section id="donateWorkArea">
+                    <h3 class="donatekindArea"><a href="#donateWorkArea" onclick="return false;">사업후원</a></h3>
+                    <figure class="localWorkDonate">
+                        <a href="donate.html#donateWorkHead">
+                            <figcaption>국내사업후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/사업후원_국내.jpg" alt="국내 사업 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="globalWorkDonate">
+                        <a href="donate.html#donateWorkHead">
+                            <figcaption>해외사업후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/사업후원_해외.jpg" alt="해외 사업 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="northWorkDonate">
+                        <a href="donate.html#donateWorkHead">
+                            <figcaption>북한사업후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/사업후원_북한.jpg" alt="북한 사업 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="emergencyWorkDonate">
+                        <a href="donate.html#donateWorkHead">
+                            <figcaption>긴급사업후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/사업후원_긴급.jpg" alt="긴급 사업 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                </section>
+                <section id="donateCompanyArea" class="img2">
+                    <h3 class="donatekindArea"><a href="#donateCompanyArea" onclick="return false;">기업 / 고액후원</a></h3>
+                    <figure class="companyDonate">
+                        <a href="donate.html#donateBigHead">
+                            <figcaption>기업후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/기업후원1.jpg" alt=" 기업 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="bigDonate">
+                        <a href="donate.html#donateBigHead">
+                            <figcaption>고액후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/고액후원.jpg" alt="고액 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                </section>
+                <section id="donateSpecialArea">
+                    <h3 class="donatekindArea"><a href="#donateSpecialArea" onclick="return false;">특별후원</a></h3>
+                    <figure class="specialDayDonate">
+                        <a href="donate.html#donateSpecialHead">
+                            <figcaption>기념일후원</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/특별후원_기념일후원.jpg" alt="기념일 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="visionStoreDonate">
+                        <a href="donate.html#donateSpecialHead">
+                            <figcaption>비전스토어</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/특별후원_비전스토어.jpg" alt="비전스토어 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                    <figure class="loveGroundDonate">
+                        <a href="donate.html#donateSpecialHead">
+                            <figcaption>사랑의밭</figcaption>
+                            <div class="donateImg">
+                                <img src="images/후원이미지/특별후원_사랑의발.jpg" alt="사랑의 밭 후원페이지로 이동하는 이미지">
+                            </div>
+                        </a>
+                    </figure>
+                </section>
+                
+                <div class="btnDonate">
+                    <div id="btnPrevDonate" role="button">이전 후원 종류 보기</div>
+                    <div id="btnNextDonate" role="button">다음 후원 종류 보기</div>
+                </div>
+
+            </div>
+            <!--후원 종류 영역 종료-->
+
+            <!--공지사항 및 캠페인 영역 시작-->
+            <div id="infoArea">
+                <section id="noticeArea">
+                    <h2>공지사항</h2>
+                    <a href="campaign.html" class="more">공지사항 더 보기</a>
+                    <ul>
+                        <li>
+                            <a href="#">[보도자료] 월드비전, 신세계인터내셔날 자주(JAJU)로부터 위생용품 전달받아</a>
+                            <time datetime="2022-06-22">2022-06-23</time>
+                        </li>
+                        <li>
+                            <a href="#">[보도자료] 월드비전, 메타버스 통해 난민촌 온라인 체험학습 진행</a>
+                            <time datetime="2022-06-22">2022-06-23</time>
+                        </li>
+                        <li>
+                            <a href="#">가정폭력피해아동가정 자립지원사업 포럼</a>
+                            <time datetime="2022-06-22">2022-06-22</time>
+                        </li>
+                        <li>
+                            <a href="#">[보도자료] 월드비전, 메타버스 통해 난민촌 온라인 체험학습 진행</a>
+                            <time datetime="2022-06-22">2022-06-16</time>
+                        </li>
+                        <li>
+                            <a href="#">[보도자료] 월드비전, 글로벌 보고서 <기아와 방임 속의 아이들: 잊혀진 난민들> 발간</a>
+                            <time datetime="2022-06-22">2022-06-15</time>
+                        </li>
+                    </ul>
+                </section>
+                <section id="campaignArea">
+                    <h2>캠페인</h2>
+                    <a href="campaign.html" class="more">캠페인 더 보기</a>
+                    <div class="gridCampaignImg">
+                        <div class="campaign1">
+                            <img src="images/index_image/index_campaign1.jpg" alt="하루팔찌 신청하기">
+                            <div class="campaignInfo">
+                                <h3>월드비전 하루팔찌</h3>
+                                <p>하루팔찌와 함께 하는 우리의 일상이 모여, 전쟁 속 아이들의 일상을 지킵니다.</p>
+                            </div>
+                        </div>
+                        <div class="campaign2">
+                            <img src="images/index_image/index_campaign2.jpg" alt="면생리대 만들기">
+                            <div class="campaignInfo">
+                                <h3>면생리대 만들기</h3>
+                                <p>
+                                    전세계 소녀들의 기본 권리를 내 손으로 지키는 가장 쉬운 방법!
+                                    소녀를 위해 내가 직접 만드는 면생리대로 소녀의 학교가는 길을 응원해주세요!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="campaign3">
+                            <img src="images/index_image/index_campaign3.jpg" alt="새로운 후원 참여하기">
+                            <div class="campaignInfo">
+                                <h3>쵸즌 : 아이의 선택</h3>
+                                <p>
+                                    아이들에게 선택의 기회를 선물해주세요.
+                                    아이들이 스스로 후원자를 선택할 때, 당신의 후원은 더욱 특별해집니다.</p>
+                            </div>
+                        </div>
+                        <div class="campaign4">
+                            <img src="images/index_image/index_campaign4.jpg" alt="10살 지우 후원하기">
+                            <div class="campaignInfo">
+                                <h3>지우의 세상</h3>
+                                <p>식당 한 켠, 2평짜리 비좁은 쪽방.
+                                    이곳이 지우와 할머니의 집입니다.
+                                    몸도 마음도 힘겨운 여름을 보내는
+                                    지우와 할머니를 도와주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--공지사항 및 캠페인 영역 종료-->
+        </div>
+        <!--컨텐츠 영역 종료-->
+        
+        <!--뉴스레터 영역 시작-->
+        <div id="newsletterArea">
+            <div class="innerNewsLetter">
+                <h2 class="hidden">뉴스레터</h2>
+                <p>월드비전의 새로운 소식을 받아보세요</p>
+                <form action="" method="post" id="newsletterform">
+                    <fieldset>
+                        <legend>뉴스레터 신청 폼</legend>
+                        <input type="text" id="applicantName" name="applicantName" placeholder="신청자 이름" required>
+                        <input type="email" name="applicantEmail" id="applicantEmail" placeholder="신청자 이메일" required>
+                        <button type="submit">뉴스레터 신청</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!--뉴스레터 영역 종료-->
+
+        <!--푸터 영역 시작-->
+        <footer>
+            <section class="guide">
+                <h2 class="hidden">월드비전 바로가기 메뉴</h2>
+                <ul>
+                    <li>바로가기</li>
+                    <li><a href="worldvision.html">월드비전 소개</a></li>
+                    <li><a href="donate.html">후원하기</a></li>
+                    <li><a href="campaign.html">캠페인 소개</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </section>
+            <address>
+                <img src="images/worldvision_orange.png" alt="오렌지색 월드비전 로고">
+                <div class="addressinfo1">
+                    <span>대표전화 02-2078-7000</span>
+                    <span>상담시간 (월~금) 09:00 ~ 18:00</span>
+                    <span>서울시 영등포구 여의나루로 77-1(07327)</span>
+                </div>
+                <div class="addressinfo2">
+                    <span>사회복지법인 월드비전</span> 
+                    <span>사업자번호 116-82-00276</span>
+                    <span>회장 조명환</span>
+                </div>
+            </address>
+        </footer>
+        <!--푸터 영역 종료-->
+    </div>
+
+    
+</body>
+</html>

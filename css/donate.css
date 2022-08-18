@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/*비쥬얼 영역*/
+#visiualArea {
+    height: 290px;
+    margin-top: 80px;
+}
+#visiualArea img{
+    width: 100%;
+    min-width: 1400px;
+    height: 300px;
+    object-fit: none;
+    filter: brightness(75%);
+}
+#visiualArea h2 {
+    position: relative;
+    top: -290px;
+    height: 290px;
+    text-align: center;
+    line-height: 290px;
+    font-size: 2.5em;
+    color: #f0f0f0;
+}
+
+/*컨텐츠 영역*/
+#contentsArea > section > h2 {
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 70px;
+}
+#contentsArea > section > h2::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 3px;
+    background-color: rgb(255, 116, 10);
+    position: relative;
+    left: 500px;
+    top: 7px;
+}
+.imageArea {
+    text-align: center;
+    margin: 0 auto;
+}
+.imageArea  figure {
+    display: inline-block;
+}
+.imageArea  figure:hover img{
+    transform: scale(1.1, 1.1);
+    filter: brightness(80%);
+}
+.imageArea  figure:hover figcaption>a {
+    color: rgb(255, 116, 10);
+}
+.imageArea  figure  img {
+    height: 335px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+                -1px -1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+.imageArea  figure > figcaption {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.5s;
+}
+.donateChildArea {
+    margin-top: 70px;
+}
+.donateChildArea figure:first-child {
+    margin-right: 130px;
+}
+.donateChildArea .image {
+    height: 335px;
+    width: 448px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.donateWorkArea {
+    margin: 150px 0;
+}
+.donateWorkArea figure {
+    margin: 0 10px;
+}
+.donateWorkArea .image {
+    height: 335px;
+    width: 239px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.donateSocialArea {
+    margin: 150px 0;
+}
+.donateSocialArea .secondLow .image {
+    height: 335px;
+    width: 448px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.donateSocialArea .secondLow figure:first-child{
+    margin-right: 130px;
+}
+.donateSpecialArea figure {
+    margin-bottom: 100px;
+}
+.donateSpecialArea .firstLow figure:nth-child(2){
+    margin: 0 32px;
+}
+.donateSpecialArea .firstLow .image {
+    height: 335px;
+    width: 319px;
+    overflow: hidden;
+    border-radius: 3px;
+}
